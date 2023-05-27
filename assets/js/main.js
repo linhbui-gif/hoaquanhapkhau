@@ -99,27 +99,48 @@ function handlerClickNav(event){
   navElement.forEach(element => element.classList.remove('active'))
   clicked && clicked.closest('.NavigationLogged-list-item').classList.add('active')
 }
-navContainer.addEventListener('click', handlerClickNav);
+navContainer && navContainer.addEventListener('click', handlerClickNav);
 let buttonPlus  = $(".qty-btn-plus");
 let buttonMinus = $(".qty-btn-minus");
-
-let incrementPlus = buttonPlus.click(function() {
+let buttonPlusCart  = $(".qty-btn-cart-plus");
+let buttonMinusCart = $(".qty-btn-cart-minus");
+buttonPlus.click(function() {
   let $n = $(this)
       .parent(".qty-container")
       .find(".input-qty");
   $n.val(Number($n.val())+1 );
 });
 
-let incrementMinus = buttonMinus.click(function() {
+buttonMinus.click(function() {
   let $n = $(this)
       .parent(".qty-container")
       .find(".input-qty");
   let amount = Number($n.val());
-  if (amount > 0) {
+  if (amount > 1) {
     $n.val(amount-1);
+  } else{
+    $(this).parent(".qty-container").parent('.quantity').addClass('display-none')
+    $(this).parent(".qty-container").parent('.quantity').prev('.btn-add-to-cart').removeClass('display-none')
   }
 });
 
+
+buttonPlusCart.click(function() {
+  let $n = $(this)
+      .parent(".qty-container-cart")
+      .find(".input-qty-cart");
+  $n.val(Number($n.val())+1 );
+});
+
+buttonMinusCart.click(function() {
+  let $n = $(this)
+      .parent(".qty-container-cart")
+      .find(".input-qty-cart");
+  let amount = Number($n.val());
+  if (amount > 1) {
+    $n.val(amount-1);
+  }
+});
 
 let productContainer = document.querySelector('.ProductList')
 function handlerClickShowCart(event){
