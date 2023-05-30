@@ -1,0 +1,28 @@
+mixin ProductItem({isSale,link})
+    .ProductItem
+        .ProductItem-images
+            a(href="detail.html")
+                img(src="https://cdn.itaphoa.com/photos/yQaCXyxjwJ9pEAPIBwQWvgdiv0LLZpVW.jpg" alt="")
+            if isSale
+                span.red.ProductItem-images-tag Sale shock
+            else
+                span.ProductItem-images-tag Hàng mới về
+        .ProductItem-body
+            h3.ProductItem-body-title
+                a(href=`${link ? link : 'detail.html'}`) NHO ĐỎ KHÔNG HẠT ÚC FUJI GOLD (9 kg/thùng)
+            if isSale
+                .ProductItem-body-action.d-flex.items-center.justify-between
+                    a.ProductItem-body-price 650.000 đ
+                    a.ProductItem-body-action-text TỔNG KHO 49 THÙNG
+                .ProductItem-body-addCart
+                    button.btn.btn-danger.btn-sm.btn-add-to-cart(type='button').mt-3
+                        i.fa.fa-cart-arrow-down.fa-2x
+                    .quantity.display-none.mt-2
+                        .qty-container
+                            button.qty-btn-minus.btn-danger.btn-cornered(type='button')
+                                i.fa.fa-minus
+                            input.input-qty.input-cornered(type='text' name='qty' value='1')
+                            button.qty-btn-plus.btn-danger.btn-cornered(type='button')
+                                i.fa.fa-plus
+            else
+                button.btn.btn-danger.btn-md.w-100(type='button').mt-5 Bảng giá bán buôn

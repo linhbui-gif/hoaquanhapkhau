@@ -1,0 +1,81 @@
+.NavigationAuth{
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  &-text{
+    margin: 0px;
+    opacity: 0.6;
+    font-size: 13px;
+    text-align: center;
+  }
+  &-action{
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    color: color(red) !important;
+  }
+}
+.NavigationLogged{
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 400px;
+  margin: auto;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  &-list{
+    &-item{
+      &-link{
+        text-align: center;
+        display: block;
+        padding: 4px 27px;
+        border-radius: 10px;
+        color: #a6a6a6!important;
+        transition: .5s;
+        cursor: pointer;
+        position: relative;
+        i{
+          font-size: 28px;
+        }
+        span{
+          font-size: 8px;
+        }
+        .number{
+          position: absolute;
+          top: 0;
+          width: 20px;
+          height: 20px;
+          color: white;
+          background-color: var(--red);
+          right: 11px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+        }
+      }
+      &:hover{
+        .NavigationLogged-list-item-link{
+          color: color(red)!important;
+        }
+      }
+      &.active{
+        .NavigationLogged-list-item-link{
+          color: color(red)!important;
+        }
+      }
+    }
+  }
+}

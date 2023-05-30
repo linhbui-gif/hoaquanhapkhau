@@ -1,0 +1,47 @@
+.loginPage{
+   #tabContainerAuth{
+     .Tabs-item{
+       background-color: transparent;
+       padding: 0;
+       .Tabs-item-tab {
+         padding: 10px 15px;
+         min-width: 189px;
+         justify-content: center;
+       }
+     }
+   }
+}
+.banner{
+  position: relative;
+  &-icon{
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    a{
+      cursor: pointer;
+    }
+    i{
+      font-size: 30px;
+      color: white;
+    }
+  }
+}
+.form-auth{
+  .input-group{
+    background-color: white;
+    box-shadow: 0 1px 1px 0 #D9DFE4;
+    padding: 5px 0;
+    border-radius: 5px;
+    .input-group-prepend{
+      padding: 0 10px;
+    }
+    .form-control{
+      padding: 10px 0;
+      border: unset;
+      background-color: transparent;
+      &:focus{
+        box-shadow: unset;
+      }
+    }
+  }
+}

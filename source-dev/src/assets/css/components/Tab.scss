@@ -1,0 +1,40 @@
+.Tabs{margin-top: 5px;
+  &-container{
+    margin-top: 5px;
+    &-content{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
+  &-item{
+    background: white;
+    padding: 6px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    &-tab{
+      list-style: none;
+      padding: 3px 15px;
+      color: black;
+      cursor: pointer;
+      flex-direction: column;
+      font-size: 11px;
+      i{
+        margin-bottom: 2px;
+        font-size: 15px;
+      }
+      &.active{
+        background-color: color(red);
+        color: white!important;
+        border-radius: 10px;
+        i{
+          color: white!important;
+        }
+      }
+    }
+  }
+}

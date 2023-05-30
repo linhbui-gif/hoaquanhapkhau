@@ -1,0 +1,47 @@
+extends includes/layouts/LayoutCart.pug
+
+block cart
+    form.cart
+        span.cart-title Đơn hàng của bạn: 2 món
+        .cart-wrapper
+            each item in [1,2]
+                .cart-wrapper-item.d-flex.items-start.justify-between
+                    .cart-wrapper-item-images
+                        img(src="https://cdn.itaphoa.com/photos/OGt6chsff2pf5PnF376uVKqgFYOSZYOk.jpg" alt="" width="78px" height="78px" style="object-fit:cover;border-radius:6px")
+                    .cart-wrapper-item-info
+                        p.mb-1 NHO ĐỎ KHÔNG HẠT ÚC FUJI GOLD
+                        span 9kg/thùng(Tổng kho 48 thùng)
+                        .quantity.mt-2
+                            .qty-container-cart
+                                button.qty-btn-cart-minus.btn-cornered(type='button')
+                                    i.fa.fa-minus
+                                input.input-qty-cart.input-cornered(type='text' name='qty' value='1')
+                                button.qty-btn-cart-plus.btn-cornered(type='button')
+                                    i.fa.fa-plus
+                    .cart-wrapper-item-price
+                        p.mb-1 780.000 đ
+                        i.fa.fa-times
+        .cart-promotion.mt-3
+            p.mb-2 Nhập mã khuyến mãi
+            .cart-promotion-group.d-flex
+                input.form-control(placeholder="Nhập mã khuyến mãi")
+                button.btn.btn-danger áp dụng
+        .cart-subTotal.mt-3
+            .cart-subTotal-wrapper
+                .cart-subTotal-wrapper-item.d-flex.items-center.justify-between.mb-2
+                    span Thành tiền
+                    span 167.000 đ
+                .cart-subTotal-wrapper-item.d-flex.items-center.justify-between.mb-2
+                    span Phí áp dụng
+                    span 0đ
+                .cart-subTotal-wrapper-item.d-flex.items-center.justify-between.mb-2
+                    span Giảm giá
+                    span 0 đ
+            .cart-subTotal-note
+                textarea.form-control(placeholder="Ghi chú")
+        .cart-total.mt-3
+            .cart-total-cost.d-flex.items-center.justify-between
+                span Tổng thanh toán
+                span.price 167.000đ
+            .cart-total-btn
+                button.btn.btn-danger.btn-lg.d-block.w-100 Đặt hàng

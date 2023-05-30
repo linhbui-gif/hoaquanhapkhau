@@ -1,0 +1,30 @@
+extends includes/layouts/Layout.pug
+
+block pages
+    .ProductDetail
+        .ProductDetail-gallery.banner
+            img(src="https://cdn.itaphoa.com/photos/5ke5jqKdvWS3tX9MZS1N4Zj34OVHSlRo.jpg", width="100%" alt="")
+            .banner-icon
+                a(href="index.html")
+                    i.fa.fa-angle-left
+        .ProductDetail-info
+            .ProductDetail-info-top
+                h1.ProductDetail-info-top-title
+                   a NHO XANH KHÔNG HẠT ÚC SWEET GLOBEL (9 kg/thùng)
+                div.ProductDetail-info-top-cart
+                    .ProductDetail-info-top-cart-price
+                        p 1.200.000 ₫
+                        p TỔNG KHO 46 THÙNG
+                    .ProductDetail-info-top-cart-action
+                        button.btn.btn-danger Thêm vào giỏ hàng
+            .ProductDetail-info-bottom
+                h4.ProductDetail-info-bottom-title Mô tả sản phẩm
+                each item in [1,2,3,4,5,6,7,8,9,10,11,12]
+                    p.ProductDetail-info-bottom-desc
+                        | 🍇 Hợp chất resveratrol trong lớp vỏ của nho có tác dụng nhăn hồng cần kết dính vào nhau, làm giảm nguy cơ hình thành các cục máu đông, tăng cholesteron tốt (HDL) và giảm cholesteron xấu (LDL). Resveratrol có khả năng chống oxy hóa mạnh gấp 7 lần vitamin E.
+            .ProductDetail-info-related
+                h4.ProductDetail-info-bottom-title Sản phẩm tương tự
+                section.ProductDetail-info-related-list.d-flex.ProductList
+                    +ProductItem({link: 'detail-baogia.html'})
+                    each val in [1, 2]
+                        +ProductItem({isSale: true})

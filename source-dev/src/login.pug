@@ -1,0 +1,41 @@
+extends includes/layouts/LayoutAuth.pug
+
+block auth
+    .loginPage
+         .banner
+             img(src="https://shop.mioapp.vn/assets/sign-in/login_banner.png" alt="" width="100%")
+             .banner-icon
+                 a(href="index.html")
+                    i.fa.fa-angle-left
+         .Tabs#tabContainerAuth
+            .Tabs-item.d-flex
+                a.Tabs-item-tab.d-flex.active.items-center(data-index="0")
+                    | Đăng nhập
+                a.Tabs-item-tab.d-flex.items-center(data-index="1")
+                    | Đăng ký
+            .Tabs-container
+                .Tabs-container-content.active
+                     form.form-auth
+                         .input-group.mb-3
+                             .input-group-prepend
+                                 i.fa.fa-mobile.fa-2x
+                             input.form-control(type='text' placeholder='Số điện thoại' aria-label='Username' aria-describedby='basic-addon1')
+                         button.btn.btn-danger.d-block.w-100.btn-lg
+                             a(href="index.html", style="color:white") Đăng nhập
+                .Tabs-container-content
+                    form.form-auth
+                        .input-group.mb-3
+                            .input-group-prepend
+                                i.fa.fa-mobile.fa-2x
+                            input.form-control(type='text' placeholder='Số điện thoại' aria-label='Username' aria-describedby='basic-addon1')
+                        .input-group.mb-3
+                            .input-group-prepend
+                                i.fa.fa-user.fa-2x
+                            input.form-control(type='text' placeholder='Họ và Tên' aria-label='Username' aria-describedby='basic-addon1')
+                        .input-group.mb-3
+                            .input-group-prepend
+                                i.fa.fa-users.fa-2x
+                            input.form-control(type='text' placeholder='Mã giới thiệu' aria-label='Username' aria-describedby='basic-addon1')
+                        button.btn.btn-danger.d-block.w-100.btn-lg
+                            | Đăng ký
+    - auth = true

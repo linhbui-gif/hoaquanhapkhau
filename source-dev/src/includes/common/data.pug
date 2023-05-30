@@ -1,0 +1,205 @@
+-
+  const dataCardInfoStatistical1 = [
+    { icon: './assets/icons/icon-traffic-light.svg', label: 'Số thành viên: ', value: '319234' },
+    { icon: './assets/icons/icon-login.svg', label: 'Đang trực tuyến: ', value: '312' },
+    { icon: './assets/icons/icon-walk.svg', label: 'Khách:', value: '15' },
+  ]
+
+  const dataCardInfoStatistical2 = [
+    { icon: './assets/icons/icon-book-spells.svg', label: 'Số lượng sách: ', value: '31923234' },
+    { icon: './assets/icons/icon-book-reader.svg', label: 'Số lượng sách mở:', value: '81234' },
+  ]
+
+  const dataFilterCategoriesBook = [
+    { label: 'Tất cả' },
+    { label: 'Giáo trình' },
+    { label: 'Luận văn, luận án' },
+    { label: 'Tạp chí, bài viết' },
+    { label: 'Nghiên cứu khoa học' },
+    { label: 'Hồ sơ' },
+    { label: 'Bài trích' },
+    { label: 'Giáo trình' },
+    { label: 'Luận văn, luận án' },
+    { label: 'Tạp chí, bài viết' },
+    { label: 'Nghiên cứu khoa học' },
+    { label: 'Hồ sơ' },
+    { label: 'Bài trích' },
+  ]
+
+  const dataFolderTree1 = [
+    { label: 'NXB Công An Nhân Dân', count: '529' },
+    { label: 'NXB Chính Trị Quốc Gia Sự Thật', count: '2.781' },
+    { label: 'NXB Xây Dựng', count: '215' },
+    { label: 'NXB Tri Thức', count: '306' },
+    { label: 'NXB Y Học', count: '420' },
+    { label: 'Bản quyền mở', count: '19.987' },
+    { label: 'Bộ Công An', count: '4.045' },
+    { label: 'Tài liệu nội bộ', count: '4.045' },
+  ]
+
+  const dataFolderTree2 = [
+    { label: 'Chính trị - Xã hội', count: '19.987', subItems: [{ label: 'Chính trị - Xã hội 1', count: '2.586' }, { label: 'Chính trị - Xã hội 2', count: '2.586' }] },
+    { label: 'Khoa học - kỹ thuật', count: '2.781', subItems: [{ label: 'Khoa học - kỹ thuật 1', count: '2.586' }, { label: 'Khoa học - kỹ thuật 2', count: '2.586' }] },
+    { label: 'Y học - Sức khoẻ', count: '19.987', subItems: [{ label: 'Y học - Sức khoẻ 1', count: '2.586' }, { label: 'Y học - Sức khoẻ 2', count: '2.586' }] },
+    { label: 'Công nghệ', count: '306', subItems: [{ label: 'Công nghệ 1', count: '2.586' }, { label: 'Công nghệ 2', count: '2.586' }] },
+    { label: 'Kiến trúc - Xây Dựng', count: '420', subItems: [{ label: 'Kiến trúc - Xây Dựng 1', count: '2.586' }, { label: 'Kiến trúc - Xây Dựng 2', count: '2.586' }] },
+    { label: 'Văn học - Nghệ thuật', count: '19.987', subItems: [{ label: 'Văn học - Nghệ thuật 1', count: '2.586' }, { label: 'Văn học - Nghệ thuật 2', count: '2.586' }] },
+    { label: 'Giải trí ', count: '4.045', subItems: [{ label: 'Giải trí  1', count: '2.586' }, { label: 'Giải trí  2', count: '2.586' }] },
+    { label: 'Khác', count: '4.045', subItems: [{ label: 'Khác 1', count: '2.586' }, { label: 'Khác 2', count: '2.586' }] },
+  ]
+
+  const dataFolderTree3 = [
+    { label: 'Tôn Thất Đại', count: '529', subItems: [{ label: 'Tôn Thất Đại 1', count: '2.586' }, { label: 'Tôn Thất Đại 2', count: '2.586' }] },
+    { label: 'Doãn Minh Khôi', count: '2.781', subItems: [{ label: 'Doãn Minh Khôi 1', count: '2.586' }, { label: 'Doãn Minh Khôi 2', count: '2.586' }] },
+    { label: 'Lê Thúy Hoa', count: '215', subItems: [{ label: 'Lê Thúy Hoa 1', count: '2.586' }, { label: 'Lê Thúy Hoa 2', count: '2.586' }] },
+    { label: 'Phan Khôi', count: '306', subItems: [{ label: 'Phan Khôi 1', count: '2.586' }, { label: 'Phan Khôi 2', count: '2.586' }] },
+    { label: 'Nguyễn Gia Thiều', count: '420', subItems: [{ label: 'Nguyễn Gia Thiều 1', count: '2.586' }, { label: 'Nguyễn Gia Thiều 2', count: '2.586' }] },
+    { label: 'Bộ Công An', count: '4.045', subItems: [{ label: 'Bộ Công An 1', count: '2.586' }, { label: 'Bộ Công An 2', count: '2.586' }] },
+    { label: 'Chưa xác định ', count: '4.045', subItems: [{ label: 'Chưa xác định  1', count: '2.586' }, { label: 'Chưa xác định  2', count: '2.586' }] },
+  ]
+
+  const dataBooksList = [
+    { title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block.png' },
+    { title: 'Động lực nghiên cứu khoa học của giảng viên khối', image: './assets/images/image-book-block-square.png' },
+    { title: 'Chiến lược barbell trong quản trị danh mục đầu tư', image: './assets/images/image-book-block.png' },
+    { title: 'Chất lượng dịch vụ ngân hàng điện tử, sự thỏa mã', image: './assets/images/image-book-block-square.png' },
+    { title: 'Tài liệu học tập Phân tích tài chính doanh nghiệp 2', image: './assets/images/image-book-block.png' },
+    { title: 'Giáo Trình Pháp Luật Kinh Tế ', image: './assets/images/image-book-block-square.png' },
+    { title: 'Giáo trình Pháp luật đại cương', image: './assets/images/image-book-block.png' },
+    { title: 'Giáo Trình - Lịch Sử Kinh Tế', image: './assets/images/image-book-block-square.png' },
+    { title: 'Giáo Trình Lý Thuyết Xác Suất và Thống Kê Toán', image: './assets/images/image-book-block.png' },
+    { title: 'Sách Kinh Tế Học Vi Mô Phần 2', image: './assets/images/image-book-block-square.png' },
+    { title: 'Sách giáo trình thực hành nghiên cứu trong kinh tế ', image: './assets/images/image-book-block.png' },
+    { title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block-square.png' },
+    { title: 'Giáo Trình Xã Hội Học', image: './assets/images/image-book-block.png' },
+    { title: 'Samsung & Tôi/ Lựa chọn & thay đổi', image: './assets/images/image-book-block-square.png' },
+    { title: 'Tư duy hậu Socrates: Cuộc cách mạng thay đổi tư ', image: './assets/images/image-book-block.png' },
+    { title: 'Chiến lược trong đàm phán', image: './assets/images/image-book-block-square.png' },
+  ]
+  const dataBooksListWithAction = [
+    { showAction: true, title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Động lực nghiên cứu khoa học của giảng viên khối', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Chiến lược barbell trong quản trị danh mục đầu tư', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Chất lượng dịch vụ ngân hàng điện tử, sự thỏa mã', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Tài liệu học tập Phân tích tài chính doanh nghiệp 2', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Giáo Trình Pháp Luật Kinh Tế ', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Giáo trình Pháp luật đại cương', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Giáo Trình - Lịch Sử Kinh Tế', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Giáo Trình Lý Thuyết Xác Suất và Thống Kê Toán', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Sách Kinh Tế Học Vi Mô Phần 2', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Sách giáo trình thực hành nghiên cứu trong kinh tế ', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Giáo Trình Xã Hội Học', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Samsung & Tôi/ Lựa chọn & thay đổi', image: './assets/images/image-book-block-square.png' },
+    { showAction: true, title: 'Tư duy hậu Socrates: Cuộc cách mạng thay đổi tư ', image: './assets/images/image-book-block.png' },
+    { showAction: true, title: 'Chiến lược trong đàm phán', image: './assets/images/image-book-block-square.png' },
+  ]
+  const dataBooksHorizontalList = [
+    { layout: 'horizontal', title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Động lực nghiên cứu khoa học của giảng viên khối', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Chiến lược barbell trong quản trị danh mục đầu tư', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Chất lượng dịch vụ ngân hàng điện tử, sự thỏa mã', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Tài liệu học tập Phân tích tài chính doanh nghiệp 2', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Giáo Trình Pháp Luật Kinh Tế ', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Giáo trình Pháp luật đại cương', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Giáo Trình - Lịch Sử Kinh Tế', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Giáo Trình Lý Thuyết Xác Suất và Thống Kê Toán', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Sách Kinh Tế Học Vi Mô Phần 2', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Sách giáo trình thực hành nghiên cứu trong kinh tế ', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Giáo Trình Phân Tích Kinh Doanh', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Giáo Trình Xã Hội Học', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Samsung & Tôi/ Lựa chọn & thay đổi', image: './assets/images/image-book-block-square.png' },
+    { layout: 'horizontal', title: 'Tư duy hậu Socrates: Cuộc cách mạng thay đổi tư ', image: './assets/images/image-book-block.png' },
+    { layout: 'horizontal', title: 'Chiến lược trong đàm phán', image: './assets/images/image-book-block-square.png' },
+  ]
+
+  const dataTableBook = [
+    { key: 'Tác giả', value: 'GS.TS. Nguyễn Văn Công (Chủ biên)' },
+    { key: 'Nhà xuất bản', value: 'NXB Đại học Kinh tế Quốc dân' },
+    { key: 'ISBN', value: '80928323' },
+    { key: 'Khổ sách', value: '19 x 24 cm' },
+    { key: 'Năm xuất bản (tái bản)', value: '2021' },
+    { key: 'Danh mục', value: 'Giáo trình, Phân tích kinh doanh, Kế toán kiểm toán' },
+  ]
+
+  const dataBooksHorizontalGrid = [
+    {
+      image: './assets/images/image-book-block.png',
+      description: 'Thuận lợi và khó khăn khi phân loại tài liệu chuyên ngành khoa học và công nghệ theo DDC',
+      dataTable: dataTableBook,
+    },
+    {
+      image: './assets/images/image-book-block-square.png',
+      description: 'Giáo trình Lý thuyết xác suất và thống kê toán',
+      dataTable: dataTableBook,
+    },
+    {
+      image: './assets/images/image-book-block.png',
+      description: 'Sách Giáo Trình Hệ Thống Thông Tin Quản Lý',
+      dataTable: dataTableBook,
+    },
+    {
+      image: './assets/images/image-book-block-square.png',
+      description: 'Bảo tồn di sản văn hóa truyền thống của các dân tộc rất ít người trong bối cảnh phát triển và hội nhập',
+      dataTable: dataTableBook,
+    },
+    {
+      image: './assets/images/image-book-block.png',
+      description: 'Thuận lợi và khó khăn khi phân loại tài liệu chuyên ngành khoa học và công nghệ theo DDC',
+      dataTable: dataTableBook,
+    },
+  ]
+
+  const dataCategoriesBook = [
+    { description: 'Nhà xuất bản Đại học Kinh tế Quốc Dân', title: '1242' },
+    { description: 'Nhà xuất bản Xây Dựng', title: '2635' },
+    { description: 'Nhà xuất bản Y học', title: '13432' },
+    { description: 'Nhà xuất bản Hội nhà văn', title: '642' },
+    { description: 'Nhà xuất bản Tri thức', title: '6322' },
+    { description: 'Nhà xuất bản Chính trị Quốc gia Sự Thật', title: '1242' },
+    { description: 'Nhà xuất bản Đại học Kinh tế Quốc Dân', title: '2635' },
+    { description: 'Nhà xuất bản Xây Dựng', title: '13432' },
+    { description: 'Nhà xuất bản Y học', title: '642' },
+    { description: 'Nhà xuất bản Hội nhà văn', title: '6322' },
+    { description: 'Nhà xuất bản Tri thức', title: '1242' },
+    { description: 'Nhà xuất bản Chính trị Quốc gia Sự Thật', title: '2635' },
+  ]
+
+  const dataAuthors = [
+    { fullName: 'Lê Thanh Sơn', name: '', image: './assets/images/image-avatar.png', check: true, borderBlue: true },
+    { fullName: 'Nguyễn Thời Trung', name: 'TT', borderBlue: true },
+    { fullName: 'Tôn Thất Đại', name: 'TD', borderBlue: true },
+    { fullName: 'Doãn Minh Khôi', name: '', image: './assets/images/image-avatar.png', borderBlue: true },
+    { fullName: 'Phạm Ngọc Thoan', name: '', image: './assets/images/image-avatar.png', borderBlue: true },
+    { fullName: 'Tôn Thất Đại', name: '', image: './assets/images/image-avatar.png', borderBlue: true },
+    { fullName: 'Lê Thanh Hằng', name: 'TH', borderBlue: true },
+    { fullName: 'Lê Thanh Sơn', name: '', image: './assets/images/image-avatar.png', borderBlue: true },
+  ]
+
+  const dataPostCategories = [
+    { link: '#', title: 'Thông báo' },
+    { link: '#', title: 'Tin nội bộ' },
+    { link: '#', title: 'Tin thư viện' },
+    { link: '#', title: 'Giới thiệu sách' },
+    { link: '#', title: 'Đại sứ văn hoá đọc' },
+    { link: '#', title: 'Hoạt động' },
+    { link: '#', title: 'Cảm nhận sách' },
+  ]
+
+  const dataDropdownAccount = [
+    { link: '#', title: 'Thay đổi thông tin tài khoản', icon: 'user-circle' },
+    { link: '#', title: 'Thay đổi mật khẩu', icon: 'lock' },
+    { link: '#', title: 'Sách đang đọc', icon: 'document' },
+    { link: '#', title: 'Tủ sách của bạn', icon: 'books' },
+    { link: '#', title: 'Đăng xuất', icon: 'logout' },
+  ]
+
+  const dataInformationCard = [
+    { title: 'Loại thành viên', description: 'Gói đọc tổ chức', icon: './assets/icons/icon-user-blue.svg' },
+    { title: 'Ngày hết hạn', description: 'Ngày 18/12/2021', icon: './assets/icons/icon-clock-blue.svg' },
+  ]
+
+  const dataInformationCardMobile = [
+    { title: 'Loại thành viên', description: 'Gói đọc tổ chức', icon: './assets/icons/icon-user-white.svg' },
+    { title: 'Ngày hết hạn', description: 'Ngày 18/12/2021', icon: './assets/icons/icon-clock-white.svg' },
+  ]

@@ -1,0 +1,80 @@
+.account{
+   background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  h1{
+    font-size: 17px;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+  }
+}
+.profile{
+  padding-top: 71px;
+  &-info{
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    i{
+      font-size: 25px;
+    }
+    &-avatar{
+      border-radius: 50%;
+      text-align: center;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      background: #fde3cf;
+      align-items: center;
+      justify-content: center;
+
+      i{
+        font-size: 30px;
+        color: color(red);
+      }
+    }
+    &-text{
+      padding-left: 10px;
+      flex: 1;
+      &-name{
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      &-phone{
+        margin-bottom: 0;
+        color: #a6a6a6;
+      }
+    }
+    &-account-manager{
+      &-title{
+        font-size: 15px;
+        color: rgb(121, 124, 128);
+        font-weight: 400;
+      }
+    }
+  }
+}
+.list-group.customize{
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  .list-group-item{
+    padding: 15px;
+    font-size: 14px;
+    border: unset;
+    i{
+      font-size: 25px;
+    }
+    span{
+      flex: 1;
+      padding-left: 10px;
+    }
+  }
+}

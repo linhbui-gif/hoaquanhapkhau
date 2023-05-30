@@ -1,0 +1,60 @@
+extends includes/layouts/LayoutAccount.pug
+
+block account
+    .profile
+        a.profile-info.d-flex
+            .profile-info-avatar
+                i.fa.fa-user
+            .profile-info-text
+                p.profile-info-text-name BUI QUANG LINH
+                p.profile-info-text-phone Thay đổi thông tin cá nhân
+            i.fa.fa-angle-right
+        .profile-info-account-manager.mt-4
+            h3.profile-info-account-manager-title Quản lý tài khoản
+            .list-group.customize
+                a.list-group-item.list-group-item-action(href='#').d-flex.items-center
+                    i.fa.fa-first-order
+                    span Đơn hàng
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='#').d-flex.items-center
+                    i.fa.fa-user
+                    span Thông tin cá nhân
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='gioithieu.html').d-flex.items-center
+                    i.fa.fa-user
+                    span Giới thiệu
+                    i.fa.fa-angle-right
+        .profile-info-account-manager.mt-4
+            h3.profile-info-account-manager-title Hỗ trợ
+            .list-group.customize
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-cog
+                    span Điều khoản sử dụng
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-user
+                    span Câu hỏi thường gặp
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='#').d-flex.items-center
+                    i.fa.fa-user
+                    span Liên hệ
+                    i.fa.fa-angle-right
+        .profile-info-account-manager.mt-4
+            h3.profile-info-account-manager-title Chính sách
+            .list-group.customize
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-cog
+                    span Chính sách khuyến mại
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-user
+                    span Chính sách bảo hành
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-user
+                    span Chính sách thanh toán
+                    i.fa.fa-angle-right
+                a.list-group-item.list-group-item-action(href='chinhsach.html').d-flex.items-center
+                    i.fa.fa-sign-out
+                    span Đăng xuất
+                    i.fa.fa-angle-right

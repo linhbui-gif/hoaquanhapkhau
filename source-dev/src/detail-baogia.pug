@@ -1,0 +1,28 @@
+extends includes/layouts/Layout.pug
+
+block pages
+    .ProductDetail
+        .ProductDetail-gallery.banner
+            img(src="https://cdn.itaphoa.com/photos/5ke5jqKdvWS3tX9MZS1N4Zj34OVHSlRo.jpg", width="100%" alt="")
+            .banner-icon
+                a(href="index.html")
+                    i.fa.fa-angle-left
+        .ProductDetail-info
+            .ProductDetail-info-top
+                h1.ProductDetail-info-top-title.mt-0
+                    a BÁO GIÁ NGÀY 27/05/2023
+                div.ProductDetail-info-top-cart
+                    .ProductDetail-info-top-cart-price
+                        p Chương trình Sale Shock
+                        p Chỉ còn 100 thùng áp dụng mức giá này
+            .ProductDetail-info-bottom
+                h4.ProductDetail-info-bottom-title Công ty SXTM XNK DC
+                each item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+                    p.ProductDetail-info-bottom-desc
+                        |🍇 Nho xanh k hạt úc autumncrip 8,5kg/thùng : 1150k.
+            .ProductDetail-info-related
+                h4.ProductDetail-info-bottom-title Sản phẩm tương tự
+                section.ProductDetail-info-related-list.d-flex.ProductList
+                    +ProductItem({link: 'detail-baogia.html'})
+                    each val in [1, 2]
+                        +ProductItem({isSale: true})

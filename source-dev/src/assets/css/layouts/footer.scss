@@ -1,0 +1,12 @@
+.footer{
+  padding: 15px;
+  background-color: white;
+  padding-bottom: 74px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  &-title{
+    font-size: 20px;
+    color: #a6a6a6;
+    font-weight: 400;
+  }
+}
